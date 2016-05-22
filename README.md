@@ -17,6 +17,7 @@ and dealer will be in different erlang shells.
   in dealer's shell
 
 *NB: If you want to run the nodes in a distributed system, use* `-name` *instead of* `-sname`. 
+*NB: You cannot use this program in the same shell*
 
 * Start the game in the dealers shell `bluff_reg ! start.`
 * Now every played gets noticed when it is his turn and when he can play. 
@@ -25,3 +26,4 @@ and dealer will be in different erlang shells.
 * Send cards with `Me ! play.` (Plays every card that you have with the required rank) or 
 with `Me ! {play, [1,4,6...]}.` (Plays cards at the chosen indexes)
 * Bluff last player that played with `Me ! bluff.`
+* Have (some) fun :)
