@@ -181,7 +181,7 @@ noticeAll(Message, Players) ->
     lists:foreach(fun({_PName, PPid}) -> PPid ! {notice, Message} end, Players). 
     
 handleWin({PName, _PPid}, Players) ->
-    noticeAll(io_lib:format("Game finished, ~p won!:) Registration Queue is open.~n", [PName]), Players), reset(Players).
+    noticeAll(io_lib:format("Game finished, ~p won!:) Registration Queue is open.~n", [PName]), Players), reset().
     
     
 unregister_safe(Atom) ->
