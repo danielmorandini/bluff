@@ -1,3 +1,5 @@
 #erlang ignores
+
 *.beam
 *.vscode
+*.dumb
