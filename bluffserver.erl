@@ -45,7 +45,7 @@ prepareGame(Players) ->
             io:format("Number of players has to be between 2 and 10. Currently ~p~n", [length(Players)]);
             
         %others           
-        reset -> reset(self())
+        reset -> reset()
             
     end.
     
