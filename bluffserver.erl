@@ -27,7 +27,8 @@ prepareGame(Players) ->
             prepareGame(NewPlayers);
             
         {add, {_PName, _PPid}} ->
-            io:format("Cannot add any more players! start the game.~n");
+            io:format("Cannot add any more players! start the game.~n"),
+            prepareGame(Players);
             
         start when length(Players) > 1 ->
             M = "Game is starting!",
@@ -42,7 +43,8 @@ prepareGame(Players) ->
             prepareGame(Players);
             
         start ->
-            io:format("Number of players has to be between 2 and 10. Currently ~p~n", [length(Players)]);
+            io:format("Number of players has to be between 2 and 10. Currently ~p~n", [length(Players)]),
+            prepareGame(Players);
             
         %others           
         reset -> reset()
